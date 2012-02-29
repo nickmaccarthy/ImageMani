@@ -8,7 +8,6 @@ require "../ImageMani.class.php";
 // Defines our webroot - i.e. http://localhost/ImagaMani
 define("WEBROOT", "/ImageMani");
 
-$local_path = pathinfo(__FILE__);
 
 $src_dir = "src_imgs";
 $dst_dir = "dst_imgs";
@@ -23,6 +22,7 @@ while ( FALSE !== ( $entry = $d1->read())) {
 
 	if ( $entry === "." || $entry === "..") continue;
 
+	// Define our paths
 	$paths = array(
 			"INPUT_PATH" => $src_dir_full,
 			"OUTPUT_PATH" => $dst_dir_full,
