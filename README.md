@@ -1,14 +1,21 @@
-Description:
+ImageMani
+=============
 
-ImageMani is a very simple PHP class that is used to manipulate images using the GD Image library.  
+ImageMani is a simple PHP class that is used to manipulate images using the GD Image library.  
 
-Some notable features include the creation of thumbnails from bigger images in a 'square' or 'default (just resized smaller)' format.
+Notable Features:
+------------------
 
-It will also resize a bigger image to a smaller one (or vise versa) keeping original proprtions intact.
+Creation of thumbnails from bigger images in a 'square' or 'default (just resized smaller)' format.
+
+Can monitor a directory of images and only create a thumbnail when a new image is added.
+
+Resize a bigger image to a smaller one (or vise versa) keeping original proprtions intact.
 
 Supports only JPEG at the moment.
 
-Example Usage:
+Usage:
+-------------------
 
 This will create a square thumbnail, checking to see if our output img already exists in our output path, with a max height and width of 150px, a crop factor of 0.5 and with a 100% output image quality
 
@@ -25,7 +32,8 @@ If you want to resize an image:
 
 
 
-Next update:
+The Future:
+-----------
       Add ability to output using a specified name, i.e. src = 'foo.jpg', output = 'foo_thumbnail.jpg'
       Include support for other formats (mainly gif and png)
       Add a 'sharpening' option
@@ -33,11 +41,13 @@ Next update:
       Add a 'text to image' option
 
 License:
+--------
 
 The ImageMani source code is released under the GPL v3 and MIT licenses.  The images included in ImageMani are copyright Nick MacCarthy 2011 (http://www.nickmaccarthy.com) and are for example only.  You are more then welcome to use ImageMani in your own projects, the only thing I ask is that if you make it better, to fork and add your updated code to this project.
 
 Requirements:
+-------------------
 
-*PHP 5.2 or higher
-*GD Image Library
+# PHP 5.2 or higher
+# GD Image Library
 
