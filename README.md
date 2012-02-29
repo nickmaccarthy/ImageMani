@@ -1,7 +1,10 @@
-
 Description:
 
+<<<<<<< HEAD
 ImageMani is a very simple PHP class that is used to manipulate images using the GD Image library.  
+=======
+ImagMani is a very simple PHP class that is used to manipulate images using the GD Image library.  
+>>>>>>> 5aa06495ef5f2d9e95d9d75e255f9c583286fee6
 
 Some notable features include the creation of thumbnails from bigger images in a 'square' or 'default (just resized smaller)' format.
 
