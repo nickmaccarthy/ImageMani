@@ -15,7 +15,7 @@ class ImageMani {
 	// Our input image we will be manipulating
 	public static $input_img;
 
-	// Out input path where the source image will reside
+	// Our input path where the source image will reside
 	public static $input_path;
 
 	// The path where will put our modified image
@@ -262,10 +262,7 @@ class ImageMani {
 
 			return $info;
 		}
-		else
-		{
-			return FALSE;	
-		}
+		else return FALSE;
 	}
 
 } // End ImageMani
