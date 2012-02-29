@@ -4,6 +4,7 @@ error_reporting(E_ALL);
 
 require "../ImageMani.class.php";
 
+/* PLEASE DEFINE THIS FOR YOUR ENVRIONMENT RIGHT AWAY */
 // Defines our webroot - i.e. http://localhost/ImagaMani
 define("WEBROOT", "/ImageMani");
 
