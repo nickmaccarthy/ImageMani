@@ -48,6 +48,6 @@ The ImageMani source code is released under the GPL v3 and MIT licenses.  The im
 Requirements:
 -------------------
 
-# PHP 5.2 or higher
-# GD Image Library
+* PHP 5.2 or higher
+* GD Image Library
 
