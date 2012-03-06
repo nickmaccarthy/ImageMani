@@ -57,7 +57,7 @@ class ImageMani {
 	* @param 	double	$crop_factor	the crop factor used from the original picture.  Higher = less crop from the orig, Lower = more crop.  0.5 seems to be the best
 	* @param 	int 	$quality 	the quality you want for you thumbnail.
 	*
-	* @return boolean
+	* @return boolean   TRUE if new image creation was successful, FALSE if not
 	*/
 	public static function thumbnail($thumb_type = "square", $check_existing = FALSE, $dst_width = 150, $dst_height = 150, $crop_factor = "2", $quality = "100") 
 	{
@@ -194,11 +194,11 @@ class ImageMani {
 	*
 	* @param	string	$src_img	source image you wish you to resize
 	* @param	string	$output_dir	directory where you wish to output your resized image to
-	* @param	int	$dst_width	what width you wish to resize to
-	* @param	int	$dst_height	what height you wish to resize to
-	* @param	int	$quality	output quality you wish to receive after img has been resized 
+	* @param	int	    $dst_width	what width you wish to resize to
+	* @param	int	    $dst_height	what height you wish to resize to
+	* @param	int	    $quality	output quality you wish to receive after img has been resized 
 	*
-	* @return boolean
+	* @return boolean   TRUE if image creation was successful, FALSE if not
 	*/
 	public static function resize($src_img, $output_dir, $max_width = 400, $max_height = 400, $quality = 100)	
 	{
@@ -247,7 +247,7 @@ class ImageMani {
 	*
 	* @param	$img	full path to image you want information for
 	* 
-	* @return 	array
+	* @return 	array   EXIF and Image dimensions in associative array -- Array( "EXIF" => <img_exif_data>, "IMAGESIZE" => <img_dimensions> )
 	*/
 	public static function getinfo($img)
 	{ 
