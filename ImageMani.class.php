@@ -3,16 +3,17 @@
 /**
 * ImageMani
 *
-* @author	Nick MacCarthy
-* @author	nickmaccarthy@gmail.com 
+* @author	Nick MacCarthy <nickmaccarthy@gmail.com>
 * 
 * @version 	1
+* 
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 */
 
 class ImageMani {
 
-	// Our input image we will be manipulating
+    // Our input img we will be manipulating
 	public static $input_img;
 
 	// Our input path where the source image will reside
@@ -28,7 +29,7 @@ class ImageMani {
 	* Intializes class, and sets input and output directories for the image
 	*
 	* @param	array	$paths	Our input img and our output directory
-	* @returns object
+	* @return   object
 	*/
 	public static function create( array $paths)
 	{
@@ -56,7 +57,7 @@ class ImageMani {
 	* @param 	double	$crop_factor	the crop factor used from the original picture.  Higher = less crop from the orig, Lower = more crop.  0.5 seems to be the best
 	* @param 	int 	$quality 	the quality you want for you thumbnail.
 	*
-	* @returns boolean
+	* @return boolean
 	*/
 	public static function thumbnail($thumb_type = "square", $check_existing = FALSE, $dst_width = 150, $dst_height = 150, $crop_factor = "2", $quality = "100") 
 	{
@@ -197,7 +198,7 @@ class ImageMani {
 	* @param	int	$dst_height	what height you wish to resize to
 	* @param	int	$quality	output quality you wish to receive after img has been resized 
 	*
-	* @returns boolean
+	* @return boolean
 	*/
 	public static function resize($src_img, $output_dir, $max_width = 400, $max_height = 400, $quality = 100)	
 	{
@@ -246,7 +247,7 @@ class ImageMani {
 	*
 	* @param	$img	full path to image you want information for
 	* 
-	* @returns 	array
+	* @return 	array
 	*/
 	public static function getinfo($img)
 	{ 
