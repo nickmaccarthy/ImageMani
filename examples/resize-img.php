@@ -24,7 +24,7 @@ while ( FALSE !== ( $entry = $d1->read())) {
 	if ( $entry === "." || $entry === "..") continue;
 
 
-	ImageMani::resize($src_dir_full.$entry, $dst_dir_full, 800, 800, 100);
+	ImageMani::resize($src_dir_full.$entry, $dst_dir_full, TRUE,  800, 800, 100);
 
 			
 }

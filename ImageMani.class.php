@@ -192,18 +192,24 @@ class ImageMani {
 	/**
 	* resizes image while keeping original proportions from our input img intact
 	*
-	* @param	string	$src_img	source image you wish you to resize
-	* @param	string	$output_dir	directory where you wish to output your resized image to
-	* @param	int	    $dst_width	what width you wish to resize to
-	* @param	int	    $dst_height	what height you wish to resize to
-	* @param	int	    $quality	output quality you wish to receive after img has been resized 
+	* @param	string	$src_img	    source image you wish you to resize
+	* @param	string	$output_dir	    directory where you wish to output your resized image to
+    * @param    bool    $check_exising  checks to see if dest img exists, if it does, return false
+	* @param	int	    $dst_width	    what width you wish to resize to
+	* @param	int	    $dst_height	    what height you wish to resize to
+	* @param	int	    $quality	    output quality you wish to receive after img has been resized 
 	*
 	* @return boolean   TRUE if image creation was successful, FALSE if not
 	*/
-	public static function resize($src_img, $output_dir, $max_width = 400, $max_height = 400, $quality = 100)	
+	public static function resize($src_img, $output_dir, $check_existing = FALSE, $max_width = 400, $max_height = 400, $quality = 100)	
 	{
 
 		$cropped_img = $output_dir . DIRECTORY_SEPARATOR .  basename($src_img);
+
+        if($check_existing)
+        {
+            if( is_file($cropped_img)) return FALSE;
+        }
 
 		$pic_info = self::getinfo($src_img);
 
