@@ -153,21 +153,7 @@ class ImageMani {
 			}
 			else if ($width === $height) 
 			{
-				$src_img = imagecreatefromjpeg($cropped_img);
-				$dst_img = imagecreatetruecolor($dst_width, $dst_height);
-
-				$c1 = array(
-					'x' => $width,
-					'y' => $height
-					);
-
-				imagecopyresized($dst_img, $src_img, 0, 0, 0, 0, $dst_width, $dst_height, $width, $height);
-
-				$created = imagejpeg($dst_img, $cropped_img, $quality);
-
-				// free up memory
-				imagedestroy($src_img);
-				imagedestroy($dst_img);
+                $created = ImageMani::resize($img, $output_dir, FALSE, $dst_width, $dst_height, $quality);
 
 			}
 			else 
@@ -183,7 +169,7 @@ class ImageMani {
 		}
 		else if ( $thumb_type === "default")
 		{
-			ImageMani::resize($img, $output_dir, $dst_width, $dst_height, $quality);
+			ImageMani::resize($img, $output_dir, FALSE, $dst_width, $dst_height, $quality);
 
 		}
 
